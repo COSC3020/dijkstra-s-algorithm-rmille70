@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2Wy-Iis-)
 # Dijkstra's Algorithm
 
 Recall the pseudocode for Dijkstra's algorithm:
@@ -23,3 +24,5 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+- First, the while loop iterates until unvisited is empty (maximum of $v$ iterations), then the first for loop iterates across every vertex in unvisted to find the closest vertex (maximum of $v$ iterations), after that we remove it from unvisited (constant time), then the second for loop iterates through all the edges of the closest node to find the smallest weight path (maximum of $v-1$ edges assuming no redundant edges) So the complexity can be represented as $v * (v + (v - 1)) = v * (2v - 1) = 2v^2 - v$ which can be bounded by $\Theta(v^2)$ since $v^2$ is the leading term in $2v^2 - v.$
