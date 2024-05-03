@@ -25,4 +25,4 @@ inefficient.
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-The time complexity of my implementation is Θ(e∗log(v)), where e is the number of edges in a graph and v is the number of vertices. First we iterate through all nodes in the unvisited set which takes O(v) time. The main loop then iterates at most v times. Finding the closest node within unvisited using a priority queue means a worst case of Olog(v), and then updating the neighbors contributes O(e) in the worst case. That makes a complexity of  v+v(log(v))+e which can be bounded by Θ(e∗log(v)).
+The time complexity of my implementation is $\Theta(e∗log(v))$, where e is the number of edges in a graph and v is the number of vertices. First we iterate through all nodes in the unvisited set which takes $O(v)$ time. The main loop then iterates at most v times. Finding the closest node within unvisited using a priority queue means a worst case of $O\log(v)$, and then updating the neighbors contributes $O(e)$ in the worst case. That makes a complexity of  $v+v(log(v))+e$ which can be bounded by $\Theta(e∗log(v)).$
